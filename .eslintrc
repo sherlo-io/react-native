@@ -1,0 +1,111 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-base", // dodano
+//    "airbnb",
+//    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:typescript-sort-keys/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["sort-destructure-keys"],
+  "settings": {
+    "import/resolver": {
+      // "alias": [["~", "./packages/api/src"]],
+      "babel-module": { "extensions": [".ts"/*, ".tsx"*/] }
+    }
+  },
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      { "allowExpressions": true }
+    ],
+    "@typescript-eslint/no-use-before-define": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+//        "tsx": "never"
+      }
+    ],
+    "import/no-anonymous-default-export": "error", // dodano
+//    "import/no-extraneous-dependencies": [
+//      "error",
+//      {
+//        "devDependencies": ["**/*.stories.tsx", "./scripts/*"]
+//      }
+//    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroups": [
+//          {
+//            "pattern": "react",
+//            "group": "external",
+//            "position": "before"
+//          },
+          // {
+          //   "pattern": "~/**",
+          //   "group": "internal"
+          // }
+        ],
+//        "pathGroupsExcludedImportTypes": ["react"],
+        "alphabetize": {
+          "order": "asc"
+        },
+        "newlines-between": "never" // dodano
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-underscore-dangle": "off",
+    "no-use-before-define": "off",
+//    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+//    "react/jsx-key": ["error", { "checkFragmentShorthand": true }],
+//    "react/jsx-props-no-spreading": "off",
+//    "react/jsx-sort-props": [
+//      "error",
+//      {
+//        "callbacksLast": true,
+//        "reservedFirst": true,
+//        "shorthandLast": true
+//      }
+//    ],
+//    "react/require-default-props": "off",
+//    "react/sort-prop-types": [
+//      "error",
+//      {
+//        "callbacksLast": true,
+//        "requiredFirst": true
+//      }
+//    ],
+    "require-await": "error", // dodano
+    "sort-destructure-keys/sort-destructure-keys": "error",
+    "typescript-sort-keys/interface": [
+      "error",
+      "asc",
+      { "requiredFirst": true }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/index.ts"],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ]
+}

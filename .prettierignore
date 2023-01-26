@@ -1,0 +1,13 @@
+# Build
+.webpack
+
+# Dependencies
+package.json
+yarn.lock
+
+# Serverless
+.dynamodb
+.serverless
+
+# Typescript
+tsconfig.json

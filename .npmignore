@@ -1,0 +1,7 @@
+# When you npm publish, if you don't have an .npmignore file, npm will use your .gitignore file
+Example
+node_modules
+.env
+android/build
+android/.gradle/
+yarn.lock

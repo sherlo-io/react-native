@@ -1,0 +1,24 @@
+{
+    "projectToken": "AXkiheAmqtMrv2qbh_lmvEmiA7MEfVqdHoHFN7eD18",
+    "storiesRegex": "WithText",
+    "android": {
+        "apkPath": "android/app/build/outputs/apk/release/app-release.apk",
+        "packageName": "com.example",
+        "devices": [
+            {
+                "name": "pixel.5",
+                "version": "11"
+            }
+        ]
+    },
+    "ios": {
+        "appPath": "~/Library/Developer/Xcode/DerivedData/Example-gqhynoludigmuhfgbwecejnkevfd/Build/Products/Release-iphonesimulator/Example.app",
+        "bundleIdentifier": "org.reactjs.native.example.Example",
+        "devices": [
+            {
+                "name": "iphone.13",
+                "version": "15.5"
+            }
+        ]
+    }
+}

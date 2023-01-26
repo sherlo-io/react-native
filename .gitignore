@@ -1,0 +1,8 @@
+bin
+lib
+node_modules
+.env
+android/build
+android/.gradle/
+
+sherlo-lib/*
